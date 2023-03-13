@@ -12,7 +12,7 @@ const About = () => {
       container
       direction={"column"}
       className={"about"}
-      sx={{ m: 2 }}
+      sx={{ m: 0, mt: 2 }}
     >
       <Grid item container justifyContent="center">
         <Paper

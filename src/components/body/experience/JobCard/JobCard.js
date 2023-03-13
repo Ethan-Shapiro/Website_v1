@@ -3,18 +3,18 @@ import { Grid, Typography } from "@mui/material";
 import CustomLink from "../../../common/CustomLink/CustomLink";
 import "./jobcard.css";
 
-const JobCard = () => {
+const JobCard = ({ company, title, startDate, endDate, bullets, tags }) => {
   return (
     <Grid container direction="column">
       <Grid item>
         <Typography display="inline" variant="h6">
-          {"Developer Advocate"}
+          {company}
           <Typography display="inline" color="blue">
             {" @ "}
           </Typography>
           <CustomLink
             link="Link"
-            text="TigerGraph"
+            text={title}
             color="blue"
             underlineColor="blue"
             display="inline"
@@ -23,20 +23,27 @@ const JobCard = () => {
       </Grid>
       <Grid item>
         <Typography variant="subtitle2">
-          {"May 2020"} {" - "} {"July 2020"}
+          {startDate} {" - "} {endDate}
         </Typography>
       </Grid>
       <Grid item>
         <ul>
-          <li>
-            Excited to start writing on Medium and aren’t sure of the details?
-            Maybe you’ve already created a story or two and want to take your
-            game to the next level. This guide is for YOU.
-          </li>
-          <li></li>
-          <li></li>
+          {bullets.map((text) => (
+            <li>
+              <Typography variant="body1" sx={{ m: 0.5 }}>
+                {text}
+              </Typography>
+            </li>
+          ))}
         </ul>
       </Grid>
+      {tags != null && (
+        <Grid item>
+          <Typography varient="subtitle2" sx={{ fontStyle: "italic" }}>
+            {"Tags: " + tags.join(", ")}
+          </Typography>
+        </Grid>
+      )}
     </Grid>
   );
 };
