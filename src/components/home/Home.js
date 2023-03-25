@@ -5,6 +5,7 @@ import CustomLink from "../common/CustomLink/CustomLink";
 import Separator from "../common/seperator/Seperator";
 import About from "../body/about/About";
 import Experience from "../body/experience/Experience";
+import Projects from "../body/projects/Projects";
 
 const Home = () => {
   return (
@@ -14,6 +15,8 @@ const Home = () => {
         <About></About>
         <Separator />
         <Experience></Experience>
+        <Separator />
+        <Projects></Projects>
         <Separator />
       </div>
     </div>

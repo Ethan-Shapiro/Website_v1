@@ -5,7 +5,21 @@ import Tab from "@mui/material/Tab";
 import JobCard from "./JobCard/JobCard";
 import { JobData } from "../../data/JobData";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import { styled } from "@mui/material/styles";
+
+const CustomHeader = styled(Typography)`
+  ::after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -8px;
+    width: 300px;
+    height: 1px;
+    margin-left: 10px;
+    background-color: black;
+    white-space: nowrap;
+  }
+`;
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,7 +66,8 @@ const Experience = () => {
       style={{ textAlign: "start", display: "flex", justifyContent: "center" }}
     >
       <Box sx={{ width: 850 }}>
-        <Typography variant="h4">{"Experience"}</Typography>
+        {/* <Typography variant="h4">{"Experience"}</Typography> */}
+        <CustomHeader variant="h4">{"Experience"}</CustomHeader>
         <Box
           sx={{
             flexGrow: 1,
@@ -68,7 +83,12 @@ const Experience = () => {
             value={currTab}
             onChange={handleChange}
             aria-label="Vertical tabs example"
-            sx={{ borderRight: 1, borderColor: "divider", width: 140 }}
+            sx={{
+              borderRight: 1,
+              borderColor: "divider",
+              width: 140,
+              height: "80%",
+            }}
           >
             {jobs.map((job, index) => (
               <Tab label={job["company"]} {...a11yProps(index)} />
