@@ -6,6 +6,7 @@ import Separator from "../common/seperator/Seperator";
 import About from "../body/about/About";
 import Experience from "../body/experience/Experience";
 import Projects from "../body/projects/Projects";
+import FeaturedProjects from "../body/projects/FeaturedProjects";
 
 const Home = () => {
   return (
@@ -15,6 +16,8 @@ const Home = () => {
         <About></About>
         <Separator />
         <Experience></Experience>
+        <Separator />
+        <FeaturedProjects></FeaturedProjects>
         <Separator />
         <Projects></Projects>
         <Separator />

@@ -1,0 +1,22 @@
+.featured-project-container {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.project-content {
+    position: relative;
+    z-index: 2;
+    grid-area: 1 / 1 / -1 / 7;
+}
+
+.project-image {
+    box-shadow: 0 10px 30px -15px var(--navy-shadow);
+    transition: var(--transition);
+    grid-area: 1 / 6 / -1 / -1;
+    position: relative;
+    z-index: 1;
+}
