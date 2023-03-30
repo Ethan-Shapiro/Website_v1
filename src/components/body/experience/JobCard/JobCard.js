@@ -8,13 +8,13 @@ const JobCard = ({ company, title, startDate, endDate, bullets, tags }) => {
     <Grid container direction="column">
       <Grid item>
         <Typography display="inline" variant="h6">
-          {company}
+          {title}
           <Typography display="inline" color="blue">
             {" @ "}
           </Typography>
           <CustomLink
             link="Link"
-            text={title}
+            text={company}
             color="blue"
             underlineColor="blue"
             display="inline"

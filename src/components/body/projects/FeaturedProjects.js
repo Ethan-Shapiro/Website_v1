@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Box } from "@mui/material";
+import { Stack, Typography, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import FeaturedCard from "./ProjectCard/FeaturedCard";
 
@@ -16,8 +16,6 @@ const CustomHeader = styled(Typography)`
     white-space: nowrap;
   }
 `;
-const GridFirstParams = { rowStart: 1, colStart: 1, rowEnd: -1, colEnd: 7 };
-const GridSecondParams = { rowStart: 1, colStart: 6, rowEnd: -1, colEnd: -1 };
 
 const FeaturedProjects = () => {
   return (
@@ -26,7 +24,11 @@ const FeaturedProjects = () => {
     >
       <Box sx={{ width: 1000 }}>
         <CustomHeader variant="h4">{"Some things I've Made"}</CustomHeader>
-        <FeaturedCard></FeaturedCard>
+        <Stack sx={{ m: 5 }} spacing={5}>
+          <FeaturedCard imageFirst={true}></FeaturedCard>
+          <FeaturedCard imageFirst={false}></FeaturedCard>
+          <FeaturedCard imageFirst={true}></FeaturedCard>
+        </Stack>
       </Box>
     </div>
   );

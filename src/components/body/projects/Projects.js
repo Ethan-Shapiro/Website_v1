@@ -1,8 +1,8 @@
 import React from "react";
-import FeaturedCard from "./ProjectCard/FeaturedCard";
+import ProjectCard from "./ProjectCard/ProjectCard";
 
 const Projects = () => {
-  return <div></div>;
+  return <ProjectCard></ProjectCard>;
 };
 
 export default Projects;
