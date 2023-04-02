@@ -13,7 +13,7 @@ const CustomHeader = styled(Typography)`
     width: 300px;
     height: 1px;
     margin-left: 10px;
-    background-color: black;
+    background-color: white;
     white-space: nowrap;
   }
 `;
@@ -26,9 +26,7 @@ const FeaturedProjects = () => {
       style={{ textAlign: "start", display: "flex", justifyContent: "center" }}
     >
       <Box sx={{ width: 1000 }}>
-        <CustomHeader color="primary" variant="h4">
-          {"Some things I've Made"}
-        </CustomHeader>
+        <CustomHeader variant="h4">{"Some things I've Made"}</CustomHeader>
         <Stack sx={{ m: 5 }} spacing={5}>
           {projects.map((project, i) => {
             return (

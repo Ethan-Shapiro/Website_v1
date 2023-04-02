@@ -6,6 +6,8 @@ import JobCard from "./JobCard/JobCard";
 import { JobData } from "../../data/JobData";
 import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const CustomHeader = styled(Typography)`
   ::after {
@@ -33,7 +35,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3, pt: 0, maxWidth: 600 }}>{children}</Box>
+        <Box sx={{ p: 3, pt: 0, maxWidth: 700 }}>{children}</Box>
       )}
     </div>
   );
@@ -55,6 +57,8 @@ function a11yProps(index) {
 const jobs = JobData;
 
 const Experience = () => {
+  const theme = useTheme();
+  const biggerThanMD = useMediaQuery(theme.breakpoints.up("md"));
   const [currTab, setCurrTab] = React.useState(0);
 
   const handleChange = (event, newTabVal) => {
@@ -65,27 +69,28 @@ const Experience = () => {
     <div
       style={{ textAlign: "start", display: "flex", justifyContent: "center" }}
     >
-      <Box sx={{ width: 850, height: "100%", m: 10 }}>
+      <Box sx={{ width: 1000, height: "100%", m: 10 }}>
         <CustomHeader variant="h4">{"Experience"}</CustomHeader>
         <Box
           sx={{
             flexGrow: 1,
             bgcolor: "background.paper",
-            display: "flex",
+            display: biggerThanMD ? "flex" : "block",
             minHeight: 370,
             height: "100%",
+            m: 5,
           }}
         >
           <Tabs
-            orientation="vertical"
+            orientation={biggerThanMD ? "vertical" : "horizontal"}
             variant="scrollable"
             value={currTab}
             onChange={handleChange}
-            aria-label="Vertical tabs example"
+            aria-label="Experience Tabs"
             sx={{
               borderRight: 1,
               borderColor: "divider",
-              width: 140,
+              width: biggerThanMD ? 140 : "100%",
               height: "80%",
             }}
           >

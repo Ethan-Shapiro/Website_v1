@@ -20,7 +20,7 @@ const ProjectCard = ({ projectInfo }) => {
           "&:hover": {
             transform: "translate(0, -10px)",
             "& .projectTitle": {
-              color: "purple",
+              color: "#64ffdb",
             },
           },
         }}
@@ -57,7 +57,7 @@ const ProjectCard = ({ projectInfo }) => {
         >
           {projectInfo.tags.map((tag, i) => {
             return (
-              <Typography key={i} variant="subtitle1">
+              <Typography key={i} variant="subtitle2">
                 {tag}
               </Typography>
             );
