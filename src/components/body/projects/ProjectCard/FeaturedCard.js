@@ -1,10 +1,9 @@
 import React from "react";
-import { Stack, Typography, Box, Paper } from "@mui/material";
+import { Stack, Typography, Box, Paper, IconButton } from "@mui/material";
 import "./FeaturedCard.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 import styled from "styled-components";
-import { useEffect } from "react";
 
 const FeaturedContainer = styled.div`
   position: relative;
@@ -14,9 +13,6 @@ const FeaturedContainer = styled.div`
   -webkit-box-align: center;
   align-items: center;
 `;
-
-const GridFirstParams = { rowStart: 1, colStart: 1, rowEnd: -1, colEnd: 7 };
-const GridSecondParams = { rowStart: 1, colStart: 6, rowEnd: -1, colEnd: -1 };
 
 const ContentContainer = styled.div`
   position: relative;
@@ -60,12 +56,12 @@ const FeaturedCard = ({ imageFirst, projectInfo }) => {
           spacing={1}
         >
           <Typography variant="body2">Featured Project</Typography>
-          <Typography variant="h4">Gamer Time</Typography>
-          <Paper elevation={10} sx={{ p: 2, backgroundColor: "red" }}>
+          <Typography variant="h4" color="primary">
+            {projectInfo.title}
+          </Typography>
+          <Paper elevation={10} sx={{ p: 2 }}>
             <Typography sx={{ textAlign: "left" }} variant="body1">
-              {
-                "A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm."
-              }
+              {projectInfo.description}
             </Typography>
           </Paper>
           <Stack
@@ -73,14 +69,21 @@ const FeaturedCard = ({ imageFirst, projectInfo }) => {
             spacing={2}
             sx={{ justifyContent: imageFirst ? "right" : "left" }}
           >
-            <Typography variant="subtitle1">React</Typography>
-            <Typography variant="subtitle1">Styled Components</Typography>
-            <Typography variant="subtitle1">Firebase</Typography>
-            <Typography variant="subtitle1">CI/CD</Typography>
+            {projectInfo.tags.map((tag) => {
+              return <Typography variant="subtitle1">{tag}</Typography>;
+            })}
           </Stack>
-          <Stack direction="row" spacing={2}>
-            <GitHubIcon></GitHubIcon>
-            <LaunchIcon></LaunchIcon>
+          <Stack
+            sx={{ justifyContent: imageFirst ? "right" : "left" }}
+            direction="row"
+            spacing={2}
+          >
+            <IconButton>
+              <GitHubIcon color="primary"></GitHubIcon>
+            </IconButton>
+            <IconButton>
+              <LaunchIcon color="primary"></LaunchIcon>
+            </IconButton>
           </Stack>
         </Stack>
       </ContentContainer>

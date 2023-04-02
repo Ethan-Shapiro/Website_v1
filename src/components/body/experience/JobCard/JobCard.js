@@ -9,14 +9,14 @@ const JobCard = ({ company, title, startDate, endDate, bullets, tags }) => {
       <Grid item>
         <Typography display="inline" variant="h6">
           {title}
-          <Typography display="inline" color="blue">
+          <Typography display="inline" color="#64FFDB">
             {" @ "}
           </Typography>
           <CustomLink
             link="Link"
             text={company}
-            color="blue"
-            underlineColor="blue"
+            color="red"
+            underlineColor="red"
             display="inline"
           ></CustomLink>
         </Typography>

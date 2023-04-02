@@ -36,7 +36,7 @@ const Header = () => {
     setAnchorElUser(null);
   };
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ bgcolor: "#0a192f" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography

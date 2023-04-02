@@ -2,6 +2,7 @@ import React from "react";
 import { Stack, Typography, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import FeaturedCard from "./ProjectCard/FeaturedCard";
+import { FeaturedProjectData } from "../../data/FeaturedProjectData";
 
 const CustomHeader = styled(Typography)`
   ::after {
@@ -17,17 +18,27 @@ const CustomHeader = styled(Typography)`
   }
 `;
 
+const projects = FeaturedProjectData;
+
 const FeaturedProjects = () => {
   return (
     <div
       style={{ textAlign: "start", display: "flex", justifyContent: "center" }}
     >
       <Box sx={{ width: 1000 }}>
-        <CustomHeader variant="h4">{"Some things I've Made"}</CustomHeader>
+        <CustomHeader color="primary" variant="h4">
+          {"Some things I've Made"}
+        </CustomHeader>
         <Stack sx={{ m: 5 }} spacing={5}>
-          <FeaturedCard imageFirst={true}></FeaturedCard>
-          <FeaturedCard imageFirst={false}></FeaturedCard>
-          <FeaturedCard imageFirst={true}></FeaturedCard>
+          {projects.map((project, i) => {
+            return (
+              <FeaturedCard
+                key={i}
+                imageFirst={i % 2 === 0}
+                projectInfo={project}
+              ></FeaturedCard>
+            );
+          })}
         </Stack>
       </Box>
     </div>

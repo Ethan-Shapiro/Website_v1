@@ -7,10 +7,33 @@ import About from "../body/about/About";
 import Experience from "../body/experience/Experience";
 import Projects from "../body/projects/Projects";
 import FeaturedProjects from "../body/projects/FeaturedProjects";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+
+const customTheme = createTheme({
+  palette: {
+    mode: "light",
+    primary: {
+      main: "#64FFDB",
+    },
+    secondary: {
+      main: "#f50057",
+    },
+    background: {
+      default: "#0a192f",
+      paper: "#243247",
+    },
+    text: {
+      primary: "#fdfdfd",
+      secondary: "#8892b0",
+    },
+  },
+});
 
 const Home = () => {
   return (
-    <div>
+    <ThemeProvider theme={customTheme}>
+      <CssBaseline />
       <Header></Header>
       <div className="home">
         <About></About>
@@ -22,7 +45,7 @@ const Home = () => {
         <Projects></Projects>
         <Separator />
       </div>
-    </div>
+    </ThemeProvider>
   );
 };
 

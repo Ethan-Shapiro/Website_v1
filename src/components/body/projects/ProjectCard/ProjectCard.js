@@ -9,13 +9,13 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import IconButton from "@mui/material/IconButton";
 import LaunchIcon from "@mui/icons-material/Launch";
 
-const ProjectCard = () => {
+const ProjectCard = ({ projectInfo }) => {
   return (
-    <Box sx={{ position: "relative" }}>
+    <Box sx={{ position: "relative", maxHeight: "100%" }}>
       <Card
         className="projectCard"
         sx={{
-          maxWidth: 345,
+          maxWidth: 350,
           transition: "transform ease 300ms",
           "&:hover": {
             transform: "translate(0, -10px)",
@@ -45,21 +45,23 @@ const ProjectCard = () => {
             component="div"
             className="projectTitle"
           >
-            League of Legends Win Prediction
+            {projectInfo.title}
           </Typography>
           <Typography variant="body1" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {projectInfo.description}
           </Typography>
         </CardContent>
         <CardActions
           sx={{ justifyContent: "center" }}
           className={"projectTags"}
         >
-          <Typography variant="body2">React</Typography>
-          <Typography variant="body2">Styled Components</Typography>
-          <Typography variant="body2">Firebase</Typography>
-          <Typography variant="body2">CI/CD</Typography>
+          {projectInfo.tags.map((tag, i) => {
+            return (
+              <Typography key={i} variant="subtitle1">
+                {tag}
+              </Typography>
+            );
+          })}
         </CardActions>
       </Card>
     </Box>

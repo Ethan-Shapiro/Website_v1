@@ -16,7 +16,7 @@ const CustomHeader = styled(Typography)`
     width: 300px;
     height: 1px;
     margin-left: 10px;
-    background-color: black;
+    background-color: white;
     white-space: nowrap;
   }
 `;
@@ -65,8 +65,7 @@ const Experience = () => {
     <div
       style={{ textAlign: "start", display: "flex", justifyContent: "center" }}
     >
-      <Box sx={{ width: 850 }}>
-        {/* <Typography variant="h4">{"Experience"}</Typography> */}
+      <Box sx={{ width: 850, height: "100%", m: 10 }}>
         <CustomHeader variant="h4">{"Experience"}</CustomHeader>
         <Box
           sx={{

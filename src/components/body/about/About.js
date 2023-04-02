@@ -37,7 +37,7 @@ const About = () => {
         <Typography variant="h4" display="inline">
           {"Hi! I'm "}
         </Typography>
-        <Typography variant="h4" display="inline" color={"blue"}>
+        <Typography variant="h4" display="inline" color={"primary"}>
           {"Ethan Shapiro 👋"}
         </Typography>
         <Typography variant="body1" sx={{ maxWidth: "500px" }}>

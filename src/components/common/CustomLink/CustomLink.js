@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "./customlink.css";
 
 const A = styled.a`
-  color: ${(props) => props.textColor};
+  color: #64ffdb;
   position: relative;
   text-decoration: none;
   :before {
@@ -13,7 +13,7 @@ const A = styled.a`
     height: 3px;
     bottom: -5px;
     left: 0;
-    background-color: ${(props) => props.underlineColor};
+    background-color: #64ffdb;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.4s ease-in-out;
