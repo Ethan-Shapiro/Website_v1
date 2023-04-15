@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Stack, Typography, Box, Paper, IconButton } from "@mui/material";
+import { Stack, Typography, Box, Paper, IconButton } from "@mui/material";
 import "./FeaturedCard.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
