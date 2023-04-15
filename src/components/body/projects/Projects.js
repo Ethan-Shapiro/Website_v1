@@ -1,7 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import { Box, Grid } from "@mui/material";
-import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import { ProjectData } from "../../data/ProjectData";
 

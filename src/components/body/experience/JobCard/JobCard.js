@@ -15,8 +15,8 @@ const JobCard = ({ company, title, startDate, endDate, bullets, tags }) => {
           <CustomLink
             link="Link"
             text={company}
-            color="red"
-            underlineColor="red"
+            color="#64FFDB"
+            underlineColor="#64FFDB"
             display="inline"
           ></CustomLink>
         </Typography>

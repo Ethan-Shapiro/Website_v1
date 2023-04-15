@@ -7,12 +7,10 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import MenuItem from "@mui/material/MenuItem";
 import { Grid } from "@mui/material";
 import CustomLink from "../common/CustomLink/CustomLink";
 import BuildCircleOutlinedIcon from "@mui/icons-material/BuildCircleOutlined";
 import WorkHistoryOutlinedIcon from "@mui/icons-material/WorkHistoryOutlined";
-import SchoolIcon from "@mui/icons-material/School";
 import { Button } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FolderOpenIcon from "@mui/icons-material/FolderOpen";
@@ -42,14 +40,12 @@ const Header = () => {
           <Typography
             variant="h6"
             noWrap
-            component="a"
+            color="primary"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "Helvetica Neue",
               fontWeight: 700,
               letterSpacing: ".1rem",
-              color: "inherit",
               textDecoration: "none",
             }}
           >
@@ -108,7 +104,7 @@ const Header = () => {
               <Grid item>
                 <Grid direction="row" container columnSpacing={0.25}>
                   <Grid item alignSelf={"center"}>
-                    <WorkHistoryOutlinedIcon></WorkHistoryOutlinedIcon>
+                    <WorkHistoryOutlinedIcon color="primary"></WorkHistoryOutlinedIcon>
                   </Grid>
                   <Grid item>
                     <CustomLink
@@ -121,12 +117,13 @@ const Header = () => {
               <Grid item>
                 <Grid direction="row" container columnSpacing={0.25}>
                   <Grid item alignSelf={"center"}>
-                    <FolderOpenIcon></FolderOpenIcon>
+                    <FolderOpenIcon color="primary"></FolderOpenIcon>
                   </Grid>
                   <Grid item>
                     <CustomLink
                       text={"Projects"}
                       link={"#projects"}
+                      color="white"
                     ></CustomLink>
                   </Grid>
                 </Grid>
@@ -134,7 +131,7 @@ const Header = () => {
               <Grid item>
                 <Grid direction="row" container columnSpacing={0.25}>
                   <Grid item alignSelf={"center"}>
-                    <BuildCircleOutlinedIcon></BuildCircleOutlinedIcon>
+                    <BuildCircleOutlinedIcon color="primary"></BuildCircleOutlinedIcon>
                   </Grid>
                   <Grid item>
                     <CustomLink text={"Skills"} link={"#skills"}></CustomLink>
@@ -144,7 +141,7 @@ const Header = () => {
               <Grid item>
                 <Grid direction="row" container columnSpacing={0.25}>
                   <Grid item alignSelf={"center"}>
-                    <AccountCircleIcon></AccountCircleIcon>
+                    <AccountCircleIcon color="primary"></AccountCircleIcon>
                   </Grid>
                   <Grid item>
                     <CustomLink text={"Contact"} link={"#contact"}></CustomLink>

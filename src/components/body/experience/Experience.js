@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import JobCard from "./JobCard/JobCard";
@@ -74,7 +74,6 @@ const Experience = () => {
         <Box
           sx={{
             flexGrow: 1,
-            bgcolor: "background.paper",
             display: biggerThanMD ? "flex" : "block",
             minHeight: 370,
             height: "100%",
