@@ -1,6 +1,27 @@
 export const JobData = [
   {
     id: 1,
+    company: "Shang Data Lab",
+    title: "ML Research Assistant",
+    startDate: "April 2023",
+    endDate: "Present",
+    bullets: [
+      "Developed and maintain a web application that helps recreation staff manage UCSDs first Esports center.",
+      "Helped managers effectively schedule staff during busy and light hours saving 10% of the staffing budget.",
+      "Used ReactJS for frontend, Python/Flask for the backend, and stored information in Google PostgreSQL.",
+      "Leading development on future features requested by users in collaboration with other team members.",
+    ],
+    tags: [
+      "Machine Learning",
+      "Transformer Models",
+      "Data Mining",
+      "Go",
+      "REST APIs",
+      "Firebase",
+    ],
+  },
+  {
+    id: 2,
     company: "UC San Diego",
     title: "Full Stack Developer Intern",
     startDate: "January 2022",
@@ -14,7 +35,7 @@ export const JobData = [
     tags: ["ReactJS", "REST API", "PostgreSQL", "GCP", "Material UI"],
   },
   {
-    id: 2,
+    id: 3,
     company: "UCSD Data Science",
     title: "Data Science Tutor",
     startDate: "January 2022",
@@ -27,7 +48,7 @@ export const JobData = [
     tags: ["Python", "Pandas", "Automation"],
   },
   {
-    id: 3,
+    id: 4,
     company: "Tiger Graph",
     title: "Developer Advocate Intern",
     startDate: "June 2022",
@@ -41,7 +62,7 @@ export const JobData = [
     tags: ["Python", "NLP", "Machine Learning", "ReactJS", "SQL"],
   },
   {
-    id: 4,
+    id: 5,
     company: "UCSD Recreation",
     title: "Esports Assistant",
     startDate: "June 2021",

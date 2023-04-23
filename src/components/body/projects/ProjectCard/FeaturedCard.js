@@ -40,9 +40,10 @@ const FeaturedCard = ({ imageFirst, projectInfo }) => {
             sx={{
               height: "100%",
               width: "100%",
+              backgroundSize: "100%",
             }}
-            alt="The house from the offer."
-            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&w=350&dpr=2"
+            alt="The image of the featured project."
+            src={projectInfo["picture"]}
           />
         </a>
       </ImageContainer>
@@ -78,10 +79,10 @@ const FeaturedCard = ({ imageFirst, projectInfo }) => {
             direction="row"
             spacing={2}
           >
-            <IconButton>
+            <IconButton href={projectInfo["github"]}>
               <GitHubIcon color="primary"></GitHubIcon>
             </IconButton>
-            <IconButton>
+            <IconButton href={projectInfo["liveLink"]}>
               <LaunchIcon color="primary"></LaunchIcon>
             </IconButton>
           </Stack>

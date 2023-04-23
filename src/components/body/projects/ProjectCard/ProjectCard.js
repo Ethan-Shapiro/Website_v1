@@ -11,11 +11,13 @@ import LaunchIcon from "@mui/icons-material/Launch";
 
 const ProjectCard = ({ projectInfo }) => {
   return (
-    <Box sx={{ position: "relative", maxHeight: "100%" }}>
+    <Box sx={{ position: "relative", height: "100%" }}>
       <Card
         className="projectCard"
         sx={{
           maxWidth: 350,
+          height: "100%",
+          minHeight: "350px",
           transition: "transform ease 300ms",
           "&:hover": {
             transform: "translate(0, -10px)",
@@ -26,6 +28,7 @@ const ProjectCard = ({ projectInfo }) => {
         }}
       >
         <CardHeader
+          sx={{ height: "18%" }}
           avatar={<FolderOpenIcon fontSize="large" />}
           action={
             <>
@@ -38,7 +41,11 @@ const ProjectCard = ({ projectInfo }) => {
             </>
           }
         />
-        <CardContent>
+        <CardContent
+          sx={{
+            height: "65%",
+          }}
+        >
           <Typography
             gutterBottom
             variant="h5"
@@ -52,7 +59,7 @@ const ProjectCard = ({ projectInfo }) => {
           </Typography>
         </CardContent>
         <CardActions
-          sx={{ justifyContent: "center" }}
+          sx={{ justifyContent: "center", height: "17%" }}
           className={"projectTags"}
         >
           {projectInfo.tags.map((tag, i) => {
