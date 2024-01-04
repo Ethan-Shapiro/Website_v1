@@ -40,10 +40,11 @@ const About = () => {
           {"Ethan Shapiro 👋"}
         </Typography>
         <Typography variant="body1" sx={{ maxWidth: "500px" }}>
-          I'm a 3rd year Data Science major at UC San Diego with a passion for
-          machine learning applications in gaming and esports 🎮. I also have
-          experience developing using full stack technologies, some of which I
-          used to build this website!
+          I'm in 4th and final year studying Data Science at UC San Diego with a
+          passion for machine learning applications in gaming and esports 🎮. I
+          also have experience developing using full stack technologies, some of
+          which I used to build this website! Please take a look around and let
+          me know what you think in the contact form 😊
         </Typography>
       </Grid>
     </Grid>
